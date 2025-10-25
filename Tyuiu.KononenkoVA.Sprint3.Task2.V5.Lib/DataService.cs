@@ -14,7 +14,7 @@ namespace Tyuiu.KononenkoVA.Sprint3.Task2.V5.Lib
                 startValue++;
             }
 
-            return sumSeries;
+            return Math.Round(sumSeries,3);
         }
     }
 }
