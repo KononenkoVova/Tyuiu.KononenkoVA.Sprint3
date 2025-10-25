@@ -6,13 +6,31 @@ namespace Tyuiu.KononenkoVA.Sprint3.Task3.V15.Lib
     {
         public int GetMinCharCount(string value, char item)
         {
-            int count = 0;
-            foreach (char chr in value)
+            int minAdjacentCount = int.MaxValue;
+            int currentCount = 0;
+
+            foreach (char currentChar in value)
             {
-                if (chr == item)
-                {  count++; }
+                if (currentChar == item)
+                {
+                    currentCount++;
+                }
+                else
+                {
+                    if (currentCount > 0 && currentCount < minAdjacentCount)
+                    {
+                        minAdjacentCount = currentCount;
+                    }
+                    currentCount = 0;
+                }
             }
-            return count;
+
+            if (currentCount > 0 && currentCount < minAdjacentCount)
+            {
+                minAdjacentCount = currentCount;
+            }
+
+            return minAdjacentCount == int.MaxValue ? 0 : minAdjacentCount;
         }
     }
 }

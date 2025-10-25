@@ -22,7 +22,7 @@ namespace Tyuiu.KononenkoVA.Sprint3.Task3.V15
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("кол-во m в предложении lrmmse mg sermmmrt = " + ds.GetMinCharCount(value, item));
+            Console.WriteLine("минимальное кол-во m на соседних поциях в предложении lrmmse mg sermmmrt = " + ds.GetMinCharCount(value, item));
             Console.ReadKey();
         }
     }
