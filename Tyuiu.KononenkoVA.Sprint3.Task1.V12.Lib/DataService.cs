@@ -6,15 +6,15 @@ namespace Tyuiu.KononenkoVA.Sprint3.Task1.V12.Lib
     {
         public double GetSumSeries(int value, int startValue, int stopValue)
         {
-            double multSeries = 1;
+            double sumSeries = 0;
+
             while (startValue <= stopValue)
             {
-                multSeries += Math.Pow((1 / Math.Pow(startValue, value)), 2);
+                sumSeries += Math.Pow(1 / Math.Pow(startValue, value), 2);
                 startValue++;
-
             }
 
-            return multSeries;
+            return sumSeries;
         }
     }
 }
