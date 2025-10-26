@@ -19,7 +19,7 @@ namespace Tyuiu.KononenkoVA.Sprint3.Task4.V6.Lib
                     res += i / (Math.Cos(i) - Math.Sin(i));
                 }
             }
-            return res;
+            return Math.Round(res,3);
         }
     }
 }
